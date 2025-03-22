@@ -1,0 +1,561 @@
+ /* RGB Background Animation */
+ @keyframes rgbBackground {
+    0% {
+        background-color: rgba(255, 100, 100, 0.2);
+    }
+
+    25% {
+        background-color: rgba(100, 255, 100, 0.2);
+    }
+
+    50% {
+        background-color: rgba(100, 100, 255, 0.2);
+    }
+
+    75% {
+        background-color: rgba(255, 255, 100, 0.2);
+    }
+
+    100% {
+        background-color: rgba(255, 100, 100, 0.2);
+    }
+}
+
+body {
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    animation: rgbBackground 20s infinite;
+}
+
+.content-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* RGB Border Animation */
+@keyframes rgbBorder {
+    0% {
+        border-color: #ff5555;
+    }
+
+    25% {
+        border-color: #55ff55;
+    }
+
+    50% {
+        border-color: #5555ff;
+    }
+
+    75% {
+        border-color: #ffff55;
+    }
+
+    100% {
+        border-color: #ff5555;
+    }
+}
+
+.header1 {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    /* Reduced from 10px */
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    /* Reduced from 10px */
+    border: 2px solid #1a73e8;
+    /* Reduced from 3px */
+    animation: rgbBorder 10s infinite;
+}
+
+.title {
+    margin-left: 10px;
+    /* Reduced from 20px */
+    color: #1a73e8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    /* Reduced shadow */
+    font-size: 1.5rem;
+    /* Added to reduce title text size */
+}
+
+.logreg {
+    position: absolute;
+    right: 10px;
+    /* Reduced from 20px */
+    top: 5px;
+    /* Reduced from 10px */
+    display: flex;
+    align-items: center;
+}
+
+/* Reduce logo size */
+header.header1 img.float-animation {
+    max-height: 40px;
+    /* Add this to control logo size */
+    width: auto;
+}
+
+.top-right {
+    margin-left: 5px;
+    /* Reduced from 10px */
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    /* Added to reduce font size */
+}
+
+.top-right:hover {
+    color: #1a73e8;
+    transform: scale(1.05);
+}
+
+.water-fact {
+    background-color: rgba(26, 115, 232, 0.1);
+    border-left: 4px solid #1a73e8;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 10px 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* RGB shine effect */
+@keyframes rgbShine {
+    0% {
+        background-position: -100% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.water-fact::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 0, 0, 0.2),
+            rgba(0, 255, 0, 0.2),
+            rgba(0, 0, 255, 0.2),
+            transparent);
+    background-size: 200% 100%;
+    pointer-events: none;
+    animation: rgbShine 5s linear infinite;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.gallery-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+            transparent,
+            rgba(255, 0, 0, 0.2),
+            rgba(0, 255, 0, 0.2),
+            rgba(0, 0, 255, 0.2),
+            transparent);
+    background-size: 200% 200%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-image:hover::after {
+    opacity: 1;
+    animation: rgbShine 3s linear infinite;
+}
+
+/* Enhanced animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-5px) rotate(2deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-5px) rotate(-2deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+.float-animation {
+    animation: float 5s ease-in-out infinite;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+}
+
+/* Water drop animation */
+@keyframes droplet {
+    0% {
+        transform: translateY(-100px) scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0) scale(1.2);
+    }
+
+    75% {
+        transform: translateY(-15px) scale(0.9);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.water-drop {
+    animation: droplet 2s ease-out;
+    position: relative;
+}
+
+/* RGB glow for water drops */
+@keyframes rgbGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    }
+
+    33% {
+        text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+    }
+
+    66% {
+        text-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+    }
+
+    100% {
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    }
+}
+
+.conservation-icon {
+    animation: rgbGlow 5s infinite;
+}
+
+/* Wave animation */
+@keyframes wave {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.wave-effect {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg,
+            #ff5555, #55ff55, #5555ff, #ffff55, #ff55ff,
+            #ff5555, #55ff55, #5555ff, #ffff55, #ff55ff);
+    background-size: 500% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: wave 10s linear infinite;
+}
+
+/* Conservation technique cards */
+.conservation-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    margin: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+@keyframes cardBorder {
+    0% {
+        border-top: 5px solid #ff5555;
+    }
+
+    25% {
+        border-top: 5px solid #55ff55;
+    }
+
+    50% {
+        border-top: 5px solid #5555ff;
+    }
+
+    75% {
+        border-top: 5px solid #ffff55;
+    }
+
+    100% {
+        border-top: 5px solid #ff5555;
+    }
+}
+
+.conservation-card {
+    animation: cardBorder 5s infinite;
+}
+
+.conservation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.conservation-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: None;
+    background: linear-gradient(45deg,
+            rgba(255, 0, 0, 0.1),
+            rgba(0, 255, 0, 0.1),
+            rgba(0, 0, 255, 0.1),
+            rgba(255, 255, 0, 0.1));
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: wave 10s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.conservation-card:hover::before {
+    opacity: 1;
+}
+
+.conservation-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+/* Footer styling with RGB elements */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg,
+            #ff5555, #55ff55, #5555ff, #ffff55, #ff55ff,
+            #ff5555, #55ff55, #5555ff, #ffff55, #ff55ff);
+    background-size: 500% 100%;
+    animation: wave 10s linear infinite;
+}
+
+.footer h4 {
+    position: relative;
+    display: inline-block;
+    color: white;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.footer h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,
+            #ff5555, #55ff55, #5555ff, #ffff55, #ff55ff);
+    background-size: 500% 100%;
+    animation: wave 10s linear infinite;
+}
+
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.footer a:hover {
+    transform: translateX(5px);
+}
+
+@keyframes linkRgb {
+    0% {
+        color: #ff5555;
+    }
+
+    25% {
+        color: #55ff55;
+    }
+
+    50% {
+        color: #5555ff;
+    }
+
+    75% {
+        color: #ffff55;
+    }
+
+    100% {
+        color: #ff5555;
+    }
+}
+
+.footer a:hover {
+    animation: linkRgb 3s infinite;
+    text-decoration: none;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-icon {
+    margin-right: 10px;
+    animation: rgbGlow 5s infinite;
+}
+
+/* Button RGB effects */
+.btn-outline-light {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            rgba(255, 0, 0, 0.3),
+            rgba(0, 255, 0, 0.3),
+            rgba(0, 0, 255, 0.3),
+            rgba(255, 255, 0, 0.3));
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.btn-outline-light:hover::before {
+    left: 0;
+}
+
+/* Water ripple animation */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+@keyframes rippleEffect {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+    }
+
+    100% {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+    }
+}
+
+.ripple:hover::after {
+    animation: rippleEffect 1s ease-out;
+}
