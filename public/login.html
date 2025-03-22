@@ -2,41 +2,38 @@
 <html>
 
 <head>
-    <!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script-->
-    <link rel="stylesheet" href="./bootstrap-4.6.2-dist/css/bootstrap.min.css">
-    <script src="./bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
-    <script src="./bootstrap-4.6.2-dist/js/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Login Form</title>
     <link rel="stylesheet" href="./css/login.css">
+         
+    
 </head>
 <script src="./js/login.js"></script>
-
-<body style="text-align: center;">
-    <div class="main">
-        <h1>Login Form</h1>
-        <h3>Enter your login credentials</h3>
+<body style="text-align: center; background-image: url(./images/natureiogin.jpg);">
+    <div class="main animate__animated animate__fadeIn">
+        <h1 class="animate__animated animate__bounceIn">Login Form</h1>
+        <h3 class="animate__animated animate__fadeIn animate__delay-1s">Enter your login credentials</h3>
         <form>
-            <label for="first">
-                Email:
-            </label>
-            <input type="text" name="first" id="email" placeholder="Enter your Username" required>
-            <br> <br>
-            <label for="password">
-                Password:
-            </label>
-            <input type="password" name="password" id="pwd" placeholder="Enter your Password" required>
-            <br> <br>
-            <button type="submit" onclick="return LoginValidate()">Submit</button>
-            <br>
-    </div>
-    </form>
-    <p>Not registered?
-        <a href="./Registration.html" style="text-decoration: none;">
-            Create an account
-        </a>
-    </p>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" name="first" id="email" placeholder="Enter your Username" required>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" name="password" id="pwd" placeholder="Enter your Password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" onclick="return LoginValidate()" class="animate__animated animate__pulse animate__infinite animate__slower">Submit</button>
+            </div>
+        </form>
+        <p class="animate__animated animate__fadeIn animate__delay-2s">Not registered?
+            <a href="./Registration.html" style="text-decoration: none;">
+                Create an account
+            </a>
+        </p>
     </div>
 </body>
 
