@@ -1,7 +1,18 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #e0f7fa;
-    color: #004d40;
+    color: #020303;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+} body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    color: #020303;
     text-align: center;
     padding: 20px;
 }
@@ -16,13 +27,162 @@ body {
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #004d40;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
     color: white;
-    border: none;
-    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-button:hover {
-    background-color: #00796b;
+button::before {
+    content: '';
+    position: absolute;
+    background: gold;
+    left: -10px;
+    width: 10px;
+    top: 0;
+    bottom: 0;
+}
+
+button:hover::before {
+    left: calc(100% + 10px);
+    transition: left 600ms;
+}
+
+/* Added animations */
+.main {
+    animation: fadeIn 1s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 40px auto;
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    animation: bounceIn 1s;
+    color: #2c3e50;
+}
+
+h3 {
+    animation: fadeIn 1.5s;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #3498db;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-bottom: 2px solid #2ecc71;
+    transform: scale(1.02);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    color: #2c3e50;
+}
+
+button[type="submit"] {
+    padding: 10px 25px;
+    margin-top: 20px;
+    background: linear-gradient(45deg, #3498db, #2c3e50);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    margin-top: 20px;
+    animation: fadeIn 2s;
+}
+
+a {
+    color: #3498db;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #2ecc71;
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.1); opacity: 0; }
+    60% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.form-group {
+    margin-bottom: 15px;
+    animation: slideIn 0.5s ease-out;
+    animation-fill-mode: both;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.3s; }
+.form-group:nth-child(2) { animation-delay: 0.6s; }
+.form-group:nth-child(3) { animation-delay: 0.9s; }
+
+.hidden {
+    display: none;
+}
+
+button {
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+
+}
+button::before {
+     content: '';
+     position: absolute;
+     background: gold;
+     left: -10px;
+     width: 10px;
+     top: 0;
+     bottom: 0;
+
+}
+button:hover::before {
+    left: calc(100% + 10px);
+    transition: left 600ms;
 }
