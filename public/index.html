@@ -1,33 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script-->
-        <link rel="stylesheet" href="./bootstrap-4.6.2-dist/css/bootstrap.min.css">
-        <script src="./bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
-        <script src="./bootstrap-4.6.2-dist/js/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Animation library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <style>
-        a{
-            background-color: blue;
-            color: #f0e8e8;
-            margin: 1px solid;
-            font-size: 50px;
-        }
-        body{
-            position: relative;
-            text-align: center;
-            top: 200px;
-        }
-    </style>
+    <title>Aqua Quest - Test Your Water Sense</title>
+    <link rel="stylesheet" href="./css/index.css">
+
 </head>
+
 <body>
+    <header class="header1 animate__animated animate__fadeIn">
+        <img src="./images/logo1.png" alt="AQUA Quiz" class="float-animation">
+        <h1 class="title animate__animated animate__fadeInRight">Aqua Quest <br>
+            Test Your Water Sense</h1>
+
+        <div class="logreg">
+            <img id="loginlogo" src="./images/user.png" style="width: 20px; height: 20px;">
+            <a href="./login.html" class="top-right animate__animated animate__fadeIn ripple"
+                style="animation-delay: 0.5s;">Login</a>&nbsp;
+            <a href="./Registration.html" class="top-right animate__animated animate__fadeIn ripple"
+                style="animation-delay: 0.7s;">Register</a>
+        </div>
+    </header>
+
+    <hr style="height: 2px; background: linear-gradient(90deg, #ff5555, #55ff55, #5555ff, #ffff55, #ff55ff);
+               background-size: 500% 100%; animation: wave 10s linear infinite;">
+
     <div>
-        <a href="./login.html"   >Login</a>&nbsp;&nbsp;
-        <a href="./Registration.html" >Register</a>
+        <video autoplay muted loop
+            style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+            <source src="./images/video.mp4" type="video/mp4">
+        </video>
+
+        <div class="container content-container animate__animated animate__fadeIn" style="animation-delay: 1s;">
+            <header style="color: rgb(103, 5, 15);">
+                <h3 class="animate__animated animate__fadeInUp" style="animation-delay: 1.2s;">
+                    <p>Water is one of the essential resources required for the existence of all living beings on planet
+                        Earth.
+                        Learning to use only what is required and preserving it is the only way to save water for our
+                        generations
+                        and the
+                        generations to come. In this article, you will come across the importance of saving water. There
+                        are
+                        also
+                        some catchy slogans on 'save water', which you can refer to write some slogans on your own. You
+                        can
+                        use
+                        them
+                        to
+                        create awareness among your fellow human beings, and together, you can take steps to preserve
+                        the
+                        water
+                        around
+                        you.</p>
+                </h3>
+
+                <!-- Image Gallery -->
+                <div class="image-gallery animate__animated animate__fadeIn" style="animation-delay: 1.5s;">
+                    <img src="./images/Water conservation.png" alt="Water conservation" class="gallery-image ripple">
+                    <img src="./images/clean water source.jpg" alt="Clean water source" class="gallery-image ripple">
+                    <img src="./images/nature.jpg" alt="Water saving" class="gallery-image ripple">
+                </div>
+
+                <h4 class="animate__animated animate__fadeInUp wave-effect" style="animation-delay: 1.7s;">Water and Its
+                    Importance
+                </h4>
+
+                <div class="water-fact animate__animated animate__fadeInLeft" style="animation-delay: 2s;">
+                    <strong>Did you know?</strong> The human body is made up of about 60% water. Staying hydrated is
+                    essential for maintaining optimal health.
+                </div>
+
+                <h5 class="animate__animated animate__fadeInUp" style="animation-delay: 2.2s;">
+                    <p>Water is one of the most fundamental necessities of life. Water covers most of our planet and our
+                        body.
+                        Life
+                        would
+                        not be nearly possible without water.</p>
+
+                    <p>Water is essential for the proper functioning of our kidneys and other functions of the body. It
+                        can
+                        be
+                        said
+                        that
+                        human beings can live even without food but can, in no way, exist without water. Water is the
+                        most
+                        vital
+                        nutrient
+                        for every cell and acts as a building block. It keeps the body hydrated and regulates the body
+                        temperature.
+                        There is
+                        a certain quantity of water intake that is required for healthy living; without which, a lot of
+                        abnormalities in
+                        body weight and diseases begin to change our lives for the worse.</p>
+
+                    <p>Throughout history, there have been many issues over water resources between states and many
+                        movements to
+                        conserve
+                        and preserve water. With the changing global climate, it is the need of the hour to understand
+                        the
+                        importance of
+                        preserving our water resources to be able to live a long healthy life.</p>
+                </h5>
+
+                <!-- ENHANCED: Water Conservation Techniques Section with RGB Animations -->
+                <section class="animate__animated animate__fadeIn" style="animation-delay: 2.5s;">
+                    <h2 class="text-center my-5 wave-effect" style="font-size: 2.5rem; font-weight: bold;">Water
+                        Conservation Techniques</h2>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="conservation-card animate__animated animate__fadeInUp ripple"
+                                style="animation-delay: 2.6s;">
+                                <div class="text-center conservation-icon water-drop">💧</div>
+                                <h4 class="text-center">Fix Leaking Taps</h4>
+                                <p>A single dripping tap can waste up to 20,000 liters of water per year. Regularly
+                                    check and fix leaking faucets to prevent unnecessary wastage.</p>
+                                
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="conservation-card animate__animated animate__fadeInUp ripple"
+                                style="animation-delay: 2.8s;">
+                                <div class="text-center conservation-icon water-drop">🚿</div>
+                                <h4 class="text-center">Shorter Showers</h4>
+                                <p>Cut your shower time by 2 minutes and save up to 40 liters of water each time.
+                                    Consider installing a low-flow showerhead to further reduce consumption.</p>
+                                
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="conservation-card animate__animated animate__fadeInUp ripple"
+                                style="animation-delay: 3.0s;">
+                                <div class="text-center conservation-icon water-drop">🌱</div>
+                                <h4 class="text-center">Drip Irrigation</h4>
+                                <p>Using drip irrigation can save up to 60% of water compared to conventional methods.
+                                    It delivers water directly to plant roots, minimizing evaporation.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="conservation-card animate__animated animate__fadeInUp ripple"
+                                style="animation-delay: 3.2s;">
+                                <div class="text-center conservation-icon water-drop">🚽</div>
+                                <h4 class="text-center">Efficient Toilets</h4>
+                                <p>Dual-flush toilets use up to 67% less water than conventional ones. Consider
+                                    upgrading or placing a displacement device in the tank to reduce water usage.</p>
+                                
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="conservation-card animate__animated animate__fadeInUp ripple"
+                                style="animation-delay: 3.4s;">
+                                <div class="text-center conservation-icon water-drop">🌧️</div>
+                                <h4 class="text-center">Rainwater Harvesting</h4>
+                                <p>Collect rainwater for gardening, washing cars, and other non-potable uses. A simple
+                                    rain barrel can save thousands of liters during the rainy season.</p>
+                                
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="conservation-card animate__animated animate__fadeInUp ripple"
+                                style="animation-delay: 3.6s;">
+                                <div class="text-center conservation-icon water-drop">👕</div>
+                                <h4 class="text-center">Full Loads Only</h4>
+                                <p>Run washing machines and dishwashers only when full. This can save up to 3,700
+                                    gallons of water per household each year.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <h1 class="animate__animated animate__fadeInUp wave-effect" style="animation-delay: 3.8s;">Millets and
+                    Water
+                    Conservation</h1>
+                <p>Millets can significantly save water compared to traditional staple crops like rice and wheat.
+                    They
+                    are particularly advantageous in regions facing water scarcity. Here are some key points
+                    regarding
+                    their water-saving potential:</p>
+
+                <div class="water-fact animate__animated animate__fadeInRight" style="animation-delay: 4.0s;">
+                    <strong>Water-saving fact:</strong> Growing 1kg of millets requires approximately 5,000 liters
+                    of water, whereas rice needs around 15,000 liters for the same quantity.
+                </div>
+
+                <ul class="animate__animated animate__fadeInUp" style="animation-delay: 4.2s;">
+                    <li>
+                        <h2 class="wave-effect">Lower Water Requirements</h2>
+                    </li>
+                    <p>Millets require up to 70% less water than rice. This makes them an excellent alternative in
+                        water-stressed areas, where conventional crops may not be sustainable.</p>
+
+                    <li>
+                        <h2 class="wave-effect">Adaptability to Arid Conditions</h2>
+                    </li>
+                    <p>Millets can thrive in arid lands and low rainfall regimes, making them suitable for
+                        cultivation
+                        in
+                        diverse environments without the need for extensive irrigation.</p>
+
+                    <li>
+                        <h2 class="wave-effect">Efficient Resource Use</h2>
+                    </li>
+                    <p>The cultivation of millets not only conserves water but also requires less energy in
+                        processing
+                        and
+                        grows in a shorter time frame compared to wheat.</p>
+                </ul>
+
+                <!-- Added image gallery for millets -->
+                <div class="image-gallery animate__animated animate__fadeIn" style="animation-delay: 4.5s;">
+                    <img src="./images/varioustyps.webp" alt="Various types of millets" class="gallery-image ripple">
+                    <img src="./images/millet.webp" alt="Millet farming" class="gallery-image ripple">
+                    <img src="./images/milletfoods.jpg" alt="Millet-based foods" class="gallery-image ripple">
+                </div>
+
+                <p class="animate__animated animate__fadeInUp" style="animation-delay: 4.7s;">In summary,
+                    incorporating millets into agricultural practices can be a strategic move to address both
+                    water scarcity and nutritional needs, especially in regions where water resources are limited.
+                </p>
+            </header>
+        </div>
     </div>
-</body>
-</html>
+
+    <!-- ADDED: Footer with About and Contact sections -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- About Section -->
+                <div class="col-md-4 animate__animated animate__fadeIn" style="animation-delay: 5.0s;">
+                    <h4>About Aqua Quest</h4>
+                    <p>Aqua Quest is an educational initiative dedicated to raising awareness about water conservation
+                        and promoting sustainable water usage practices across communities.</p>
+                    <p>Our mission is to empower individuals with knowledge and practical tools to make a positive
+                        impact on water preservation for future generations.</p>
+                    <div class="mt-4">
+                        <a href="#" class="btn btn-outline-light mr-2 ripple">Learn More</a>
+                        <a href="#" class="btn btn-outline-light ripple">Join Us</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-4 animate__animated animate__fadeIn" style="animation-delay: 5.2s;">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#" class="ripple">Home</a></li>
+                        <li><a href="#" class="ripple">Water Conservation Tips</a></li>
+                        <li><a href="#" class="ripple">Water Facts</a></li>
+                        <li><a href="#" class="ripple">Resources</a></li>
+                        <li><a href="#" class="ripple">Blog</a></li>
+                        <li><a href="#" class="ripple">Take The Quiz</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="col-md-4 animate__animated animate__fadeIn" style="animation-delay: 5.4s;">
+                    <h4>Contact Us</h4>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span>123 Water Way, Conservation City, 54321</span
